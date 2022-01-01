@@ -1,3 +1,2 @@
 # practica
-para practicar
-pepe
+Todos los archivos son de practica
