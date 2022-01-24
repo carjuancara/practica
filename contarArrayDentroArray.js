@@ -11,3 +11,4 @@ for (var i=0; i<arr.length; i++){
 }  
 console.log('El total de arrays es de: ' +`${suma}`);
 
+arr.forEach()
