@@ -12,17 +12,21 @@ var juan = {
 };
 
 function imc(){
-  console.log('Hola '+ this.name + ' Tu IMC ES ' + this.peso/(this.altura*this.altura));
+  var imc= this.peso/(this.altura*this.altura);
+  imc = imc.toFixed(2);
+  var estado='';
+  
+  if (imc <=20)						{estado='Desnutrido!'};      
+  if (imc > 20 && imc<=25){estado='con peso normal!'};
+  if (imc > 25)						{estado= "con Obesidad!"}; 
+  
+  console.log('Hola '+ this.name + ' Tu IMC ES: ' + imc);
+  console.log('Tu estas: ',estado);
+  
 }
 
-var saludarCarlos = imc.bind(carlos);
-var saludarJuan	  = imc.bind(juan);
 
-saludarCarlos();
-saludarJuan();
-
-
-
-
-
-
+var imcCarlos = imc.bind(carlos);
+var imcJuan	  = imc.bind(juan);
+imcCarlos();
+imcJuan();
