@@ -29,11 +29,11 @@ class Lista{
               
             while (current){
               
-              if (typeof v === 'function'){
-                if (v(current.value)) return 'Valor encontrado --->'+current.value
+              if (typeof value === 'function'){
+                if (value(current.value)) return 'Valor encontrado --->'+current.value
               
                 }
-              if (current.value===v){
+              if (current.value===value){
                 return 'Valor encontrado --->'+current.value
               }
             current=current.next;
@@ -64,9 +64,9 @@ class Lista{
                  }
                  // ingreso un numero menor al primero de la
                    // lista    
-                   if (current.value>v){
+                   if (current.value>value){
                        aux	          =current;
-                       this.head	  =nuevoNodo;
+                       this.head	    =nuevoNodo;
                        nuevoNodo.next =aux;  
                        return
                    }
@@ -92,7 +92,7 @@ class Lista{
                          return
                     }else{
                        //> antes del nodo actual
-                       aux	       =current;
+                       aux	         =current;
                        anterior.next =nuevoNodo;
                        nuevoNodo.next=aux;  
                        return
@@ -101,10 +101,10 @@ class Lista{
                      // busca el siguiente
                    }else if (current.value<value){	//  
                            anterior=current;	//  guarda el anterior
-                        current=current.next;  //  pasa al siguiente nodo
+                           current=current.next;  //  pasa al siguiente nodo
                        }else{
                        // si el valor es MAYOR o IGUAL lo agrega despues del actual
-                       aux	       =current;
+                       aux	         =current;
                        anterior.next =nuevoNodo;
                        nuevoNodo.next=aux;  
                        return
